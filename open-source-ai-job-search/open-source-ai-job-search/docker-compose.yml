@@ -1,0 +1,58 @@
+services:
+  api:
+    build: .
+    command: ["jobsearch", "serve", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      JOBSEARCH_CONFIG: /app/config/settings.toml
+      OLLAMA_BASE_URL: http://ollama:11434
+    volumes:
+      - ./config:/app/config
+      - ./examples:/app/examples
+      - ./data:/app/data
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+  dashboard:
+    build: .
+    command: ["jobsearch", "dashboard", "--host", "0.0.0.0", "--port", "8501"]
+    environment:
+      JOBSEARCH_CONFIG: /app/config/settings.toml
+      OLLAMA_BASE_URL: http://ollama:11434
+    volumes:
+      - ./config:/app/config
+      - ./examples:/app/examples
+      - ./data:/app/data
+    ports:
+      - "8501:8501"
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+  scheduler:
+    build: .
+    command: ["jobsearch", "scheduler"]
+    profiles: ["scheduler"]
+    environment:
+      JOBSEARCH_CONFIG: /app/config/settings.toml
+      OLLAMA_BASE_URL: http://ollama:11434
+    volumes:
+      - ./config:/app/config
+      - ./examples:/app/examples
+      - ./data:/app/data
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama-data:/root/.ollama
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
+
+volumes:
+  ollama-data:

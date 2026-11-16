@@ -1,0 +1,44 @@
+[
+  {
+    "id": "demo-001",
+    "company": "NovaCloud",
+    "title": "Senior Full Stack Engineer",
+    "location": "Remote - India",
+    "workplace_type": "remote",
+    "employment_type": "Full-time",
+    "department": "Engineering",
+    "description": "Build cloud products using React, TypeScript, Python, FastAPI, PostgreSQL and Azure. You will design REST APIs, write automated tests, use Docker, and work with product and QA. We are looking for 4-7 years of software engineering experience.",
+    "job_url": "https://example.invalid/jobs/demo-001",
+    "apply_url": "https://example.invalid/jobs/demo-001/apply",
+    "posted_at": "2026-11-10T09:00:00Z",
+    "salary_text": "Salary not disclosed"
+  },
+  {
+    "id": "demo-002",
+    "company": "DataForge",
+    "title": "Principal Java Platform Engineer",
+    "location": "Bengaluru, India",
+    "workplace_type": "hybrid",
+    "employment_type": "Full-time",
+    "department": "Platform",
+    "description": "Lead a Java and Kafka platform team. Requires 10+ years of experience, deep JVM internals, Kubernetes operations, and people management.",
+    "job_url": "https://example.invalid/jobs/demo-002",
+    "apply_url": "https://example.invalid/jobs/demo-002/apply",
+    "posted_at": "2026-11-08T09:00:00Z",
+    "salary_text": "Salary not disclosed"
+  },
+  {
+    "id": "demo-003",
+    "company": "StarterWorks",
+    "title": "Frontend Intern",
+    "location": "Remote",
+    "workplace_type": "remote",
+    "employment_type": "Internship",
+    "department": "Engineering",
+    "description": "Unpaid internship for students learning HTML, CSS and basic JavaScript.",
+    "job_url": "https://example.invalid/jobs/demo-003",
+    "apply_url": "https://example.invalid/jobs/demo-003/apply",
+    "posted_at": "2026-11-05T09:00:00Z",
+    "salary_text": "Unpaid"
+  }
+]

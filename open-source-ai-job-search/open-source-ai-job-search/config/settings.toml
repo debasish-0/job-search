@@ -1,0 +1,102 @@
+[app]
+database_path = "data/jobsearch.db"
+output_dir = "data/applications"
+digest_dir = "data/digests"
+profile_path = "data/profile.json"
+user_agent = "OpenSourceAIJobSearch/0.1 (+local personal job search)"
+request_timeout_seconds = 30
+request_delay_seconds = 0.25
+
+[candidate]
+# These defaults are tailored for a full-stack developer with about five years
+# of experience. Replace the name and contact values before generating drafts.
+name = "Your Name"
+email = "your.email@example.com"
+phone = ""
+location = "Pune, India"
+current_title = "Full Stack Developer"
+years_experience = 5
+resume_path = "examples/sample_resume.txt"
+target_roles = [
+  "Senior Full Stack Developer",
+  "Full Stack Engineer",
+  "Software Engineer",
+  "Python React Developer"
+]
+preferred_locations = [
+  "Pune",
+  "Bengaluru",
+  "Bangalore",
+  "Hyderabad",
+  "India",
+  "Remote"
+]
+workplace_preferences = ["remote", "hybrid", "on-site"]
+skills = [
+  "Python",
+  "FastAPI",
+  "React",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "PostgreSQL",
+  "Azure",
+  "Docker",
+  "REST API",
+  "Pytest",
+  "Jest",
+  "Git"
+]
+include_keywords = []
+exclude_keywords = ["unpaid", "commission only"]
+
+[workflow]
+minimum_match_score = 68
+llm_analysis_minimum_score = 76
+max_llm_analyses_per_run = 10
+schedule_hours = 12
+inactive_after_days = 30
+write_digest = true
+send_email_digest = false
+
+[scoring]
+semantic_weight = 0.45
+skills_weight = 0.25
+title_weight = 0.15
+location_weight = 0.10
+experience_weight = 0.05
+
+[ai]
+enabled = true
+base_url = "http://localhost:11434"
+chat_model = "qwen3:4b-instruct"
+embedding_model = "nomic-embed-text"
+request_timeout_seconds = 180
+max_resume_characters = 16000
+max_job_characters = 14000
+
+# The local fixture keeps the project runnable before real ATS boards are added.
+[[sources.local_json]]
+path = "examples/sample_jobs.json"
+company = ""
+enabled = true
+
+# Add one block per target company. The identifier is the final segment in the
+# company's hosted job-board URL.
+#
+# [[sources.greenhouse]]
+# board = "company-board-token"
+# company = "Company Name"
+# enabled = true
+#
+# [[sources.lever]]
+# site = "company-site-name"
+# company = "Company Name"
+# region = "global" # global or eu
+# enabled = true
+#
+# [[sources.ashby]]
+# board = "CompanyJobsPageName"
+# company = "Company Name"
+# include_compensation = true
+# enabled = true

@@ -1,0 +1,22 @@
+YOUR NAME
+Full Stack Developer | Pune, India
+Email: your.email@example.com
+
+SUMMARY
+Full-stack developer with five years of experience delivering web applications
+and APIs. Experienced with React, Next.js, TypeScript, Python, FastAPI,
+PostgreSQL, Azure, Docker, automated tests, and cross-functional delivery.
+
+SKILLS
+Python, FastAPI, React, Next.js, TypeScript, JavaScript, PostgreSQL, Azure,
+Docker, REST APIs, Pytest, Jest, Git, CI/CD
+
+EXPERIENCE HIGHLIGHTS
+- Built and maintained responsive web applications using React and Next.js.
+- Designed and implemented Python and FastAPI services and REST APIs.
+- Worked across frontend, backend, database, testing, and cloud deployment.
+- Collaborated with product, client, QA, and engineering stakeholders.
+- Improved security, test coverage, reliability, and maintainability.
+
+Replace this sample with your real resume. The workflow never treats this file
+as verified unless you review the generated application package.
